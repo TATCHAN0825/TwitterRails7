@@ -28,5 +28,10 @@
       <% end %>
     </ul>
     <%= yield %>
+    <% if Rails.env.development? %>
+      <div style="margin-top: 10px">
+        <%= link_to "letter_opener_web", letter_opener_web_path, style: "color: gray; font-size: 12px" %>
+      </div>
+    <% end %>
   </body>
 </html>
